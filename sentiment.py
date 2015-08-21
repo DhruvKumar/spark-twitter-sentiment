@@ -23,8 +23,6 @@ hashingTF = HashingTF()
 
 tf_training = training.map(lambda tup: hashingTF.transform(tup[1]))
 
-tf_training.cache()
-
 idf_training = IDF().fit(tf_training)
 
 tfidf_training = idf_training.transform(tf_training)
@@ -47,8 +45,6 @@ model = NaiveBayes.train(labeled_training_data, 1.0)
 
 tf_test = test.map(lambda tup: hashingTF.transform(tup[1]))
 
-tf_test.cache()
-
 idf_test = IDF().fit(tf_test)
 
 tfidf_test = idf_test.transform(tf_test)
@@ -70,3 +66,6 @@ labeled_test_data = test_labeled.map(lambda k: LabeledPoint(k[0][0], k[1]))
 predictionAndLabel = labeled_test_data.map(lambda p : (model.predict(p.features), p.label))
 
 accuracy = 1.0 * predictionAndLabel.filter(lambda (x, v): x == v).count() / labeled_test_data.count()
+
+print accuracy
+
