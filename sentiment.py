@@ -69,3 +69,10 @@ accuracy = 1.0 * predictionAndLabel.filter(lambda (x, v): x == v).count() / labe
 
 print accuracy
 
+labeled_2 = test_labeled.map(lambda k: (k[0][1], LabeledPoint(k[0][0], k[1])))
+
+predictionAndLabel2 = labeled_2.map(lambda p : [p[0], model.predict(p[1].features), p[1].label])
+
+accuracy = 1.0 * predictionAndLabel2.filter(lambda (x, v): x == v).count() / labeled_test_data.count()
+
+print accuracy
