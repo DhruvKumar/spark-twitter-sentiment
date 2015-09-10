@@ -6,7 +6,7 @@ import org.apache.spark.deploy.SparkSubmit
  * Wrapper around Spark Submit for fast development and debugging in IntelliJ (and other IDEs).
  * If this class is used as the main class in a run configuration, then
  * you can pass in arguments exactly like you would to the "spark-submit"
- * script. To use in IntelliJ IDEA:
+ * script and launch the job from IntelliJ! To use in IntelliJ IDEA:
  * <ol>
  *   <li>
  *     Add $SPARK_HOME/conf/ folder as a resource folder to your module
