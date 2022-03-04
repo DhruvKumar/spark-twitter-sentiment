@@ -18,7 +18,7 @@
         <java.version>1.7</java.version>
         <scala.minor.version>2.10</scala.minor.version>
         <scala.complete.version>${scala.minor.version}.4</scala.complete.version>
-        <spark.version>1.3.1</spark.version>
+        <spark.version>2.2.0</spark.version>
         <corenlp.version>3.4.1</corenlp.version>
         <twitter4j.version>3.0.6</twitter4j.version>
     </properties>
@@ -27,7 +27,7 @@
         <profile>
             <id>hdp</id>
             <properties>
-                <spark.version>1.3.1.2.3.2.0-2650</spark.version>
+                <spark.version>2.2.0</spark.version>
             </properties>
         </profile>
     </profiles>
