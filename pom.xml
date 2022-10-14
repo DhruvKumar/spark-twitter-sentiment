@@ -16,7 +16,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.7</java.version>
-        <scala.minor.version>2.13.6</scala.minor.version>
+        <scala.minor.version>2.13.7</scala.minor.version>
         <scala.complete.version>${scala.minor.version}.4</scala.complete.version>
         <spark.version>1.3.1</spark.version>
         <corenlp.version>4.4.0</corenlp.version>
